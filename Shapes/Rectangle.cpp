@@ -6,7 +6,13 @@
 
 namespace sh {
     double Rectangle::calculateArea() {
-        area = a * b;
-        return area;
+        setArea(a * b);
+        return getArea();
+    }
+
+    void Rectangle::printShape() const {
+        std::cout << "xPos: " << getX() << " yPos: " << getY() << " Colour: " << getColour() << " Area: " << getArea();
+        std::cout << std::endl;
+
     }
 } // sh

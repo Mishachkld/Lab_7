@@ -8,20 +8,17 @@ namespace sh {
 
 
     double Circle::calculateArea() {
-        area = PI * radius;
-        return  area;
-    }
-
-    double Circle::getX() const {
-        return x;
-    }
-
-    double Circle::getY() const {
-        return y;
+        setArea(PI * radius);
+        return getArea();
     }
 
     double Circle::getRadius() const {
         return radius;
+    }
+
+    void Circle::printShape() const {
+        std::cout << "xPos: " << getX() << " yPos: " << getY() << " Radius: " << getRadius() << " Area: " << getArea();
+        std::cout << std::endl;
     }
 
 }

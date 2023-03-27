@@ -7,25 +7,24 @@
 
 namespace sh {
 
-class Rectangle: public sh::Shape{
-public:
-    Rectangle( double x, double y, std::string colour, double a, double b): x(x), y(y), colour(std::move(colour)) {
-        if ((a >0)  and (b >= 0)){
-            this->a = a;
-            this->b = b;
-        }
+    class Rectangle : virtual public sh::Shape {
+    public:
+        Rectangle(double x, double y, const std::string &colour, double a,
+                  double b) : Shape(x, y, colour) {
+            if ((a > 0) and (b >= 0)) {
+                this->a = a;
+                this->b = b;
+            }
+        };
+
+        void printShape() const override;
+
+        double calculateArea() override;
+
+    private:
+        double a, b;
+
+
     };
-
-    double calculateArea() override;
-private:
-    double x;
-    double y;
-    std::string colour;
-    double area = -1;
-    double a, b;
-
-
-
-};
 
 } // sh

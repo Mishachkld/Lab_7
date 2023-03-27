@@ -4,27 +4,27 @@
 #pragma once
 
 #include "Shape.hpp"
-#include <cmath>
+
 
 namespace sh {
 
-    class Triangle:virtual public sh::Shape{
+    class Triangle : public sh::Shape {
     public:
-        Triangle( double x, double y, std::string colour, double a, double b, double c): x(x), y(y), colour(std::move(colour)) {
-            if ((a >0)  and (b >= 0) and (c >= 0)){
+        Triangle(double x, double y, std::string colour, double a,
+                 double b, double c) : Shape(x, y, std::move(colour)) {
+            if ((a > 0) and (b >= 0) and (c >= 0)) {
                 this->a = a;
                 this->b = b;
                 this->c = c;
             }
         };
 
+        void printShape() const override;
+
         double calculateArea() override;
+
     private:
-        double a,b,c; // стороны треугольника
-        double x;
-        double y;
-        double area = -1;  // площадь
-        std::string colour;
+        double a, b, c; // стороны треугольника
     };
 
 } // sh

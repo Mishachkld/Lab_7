@@ -10,26 +10,22 @@
 
 namespace sh {
 
-    class Circle : virtual private sh::Shape {
+    class Circle : virtual public sh::Shape {
     public:
-        Circle(double x, double y, std::string colour, double radius): x(x), y(y), colour(std::move(colour)) {
+        Circle(double x, double y, std::string colour, double radius)
+                : Shape(x, y, std::move(colour)){
             if (radius >= 0)
                 this->radius = radius;
         }
 
-        double getX() const;
-
-        double getY() const;
-
         double getRadius() const;
 
-        double calculateArea() override;
+        double calculateArea() override ;
+
+        void printShape() const override;
+
     private:
-        double x;
-        double y;
-        double area = -1;  // площадь
         double radius = -1;
-        std::string colour;
         //const double PI = 3.14; // можно использовать с библиотеки Math
 
     };
