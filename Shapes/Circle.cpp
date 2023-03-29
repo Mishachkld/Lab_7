@@ -16,11 +16,6 @@ namespace sh {
         return radius;
     }
 
-    void Circle::printShape() const {
-        std::cout << "xPos: " << getX() << " yPos: " << getY() << " Radius: " << getRadius() << " Area: " << getArea();
-        std::cout << std::endl;
-    }
-
 }
 
 

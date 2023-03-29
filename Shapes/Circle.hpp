@@ -4,15 +4,13 @@
 
 #pragma once
 
-#include <utility>
-
 #include "Shape.hpp"
 
 namespace sh {
 
     class Circle : virtual public sh::Shape {
     public:
-        Circle(double x, double y, std::string colour, double radius)
+        Circle(double x = 0, double y = 0, std::string colour = "black", double radius = 0)
                 : Shape(x, y, std::move(colour)){
             if (radius >= 0)
                 this->radius = radius;
@@ -22,7 +20,6 @@ namespace sh {
 
         double calculateArea() override ;
 
-        void printShape() const override;
 
     private:
         double radius = -1;

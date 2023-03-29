@@ -8,9 +8,10 @@ int main() {
     sh::Triangle* triangle = new sh::Triangle( 1, 1, "red", 3, 4, 6);
     sh::Rectangle* rectangle = new sh::Rectangle( 1, 1, "red", 3, 4);
     circle->calculateArea();
+    rectangle->calculateArea();
 
-    rectangle->printShape();
-    std::cout <<circle->calculateArea() << " " <<  triangle->calculateArea() << " " << rectangle->calculateArea();
+    rectangle->printArea();
+    std::cout << "Circle area: " << circle->calculateArea() << std::endl <<"Triangle area: " <<  triangle->calculateArea();
     return 0;
 }
 

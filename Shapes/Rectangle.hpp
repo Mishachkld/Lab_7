@@ -17,8 +17,6 @@ namespace sh {
             }
         };
 
-        void printShape() const override;
-
         double calculateArea() override;
 
     private:

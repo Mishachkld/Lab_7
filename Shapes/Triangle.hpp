@@ -5,10 +5,9 @@
 
 #include "Shape.hpp"
 
-
 namespace sh {
 
-    class Triangle : public sh::Shape {
+    class Triangle : virtual public sh::Shape {
     public:
         Triangle(double x, double y, std::string colour, double a,
                  double b, double c) : Shape(x, y, std::move(colour)) {
@@ -18,8 +17,6 @@ namespace sh {
                 this->c = c;
             }
         };
-
-        void printShape() const override;
 
         double calculateArea() override;
 

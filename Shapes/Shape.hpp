@@ -17,9 +17,12 @@ namespace sh {
 
         virtual ~Shape() = default;
 
-        virtual double calculateArea()  = 0;
+        virtual double calculateArea() = 0;
 
-        virtual void printShape() const = 0;
+        void printArea() const {
+            if (area != -1)
+                std::cout << getArea() << std::endl;
+        };
 
         static constexpr double PI = 3.14;  // можно и из Math взять
     public:
