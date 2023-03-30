@@ -38,7 +38,6 @@ namespace sh {
             return area;
         }
 
-
         const std::string &getColour() const {
             return colour;
         }

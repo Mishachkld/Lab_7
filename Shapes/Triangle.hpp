@@ -7,7 +7,7 @@
 
 namespace sh {
 
-    class Triangle : virtual public sh::Shape {
+    class Triangle :  public sh::Shape {
     public:
         Triangle(double x, double y, std::string colour, double a,
                  double b, double c) : Shape(x, y, std::move(colour)) {

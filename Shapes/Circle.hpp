@@ -8,7 +8,7 @@
 
 namespace sh {
 
-    class Circle : virtual public sh::Shape {
+    class Circle :  public sh::Shape {
     public:
         Circle(double x = 0, double y = 0, std::string colour = "black", double radius = 0)
                 : Shape(x, y, std::move(colour)){

@@ -7,7 +7,7 @@
 
 namespace sh {
 
-    class Rectangle : virtual public sh::Shape {
+    class Rectangle :  public sh::Shape {
     public:
         Rectangle(double x, double y, const std::string &colour, double a,
                   double b) : Shape(x, y, colour) {
