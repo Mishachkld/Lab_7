@@ -21,11 +21,11 @@ namespace sh {
 
         void printArea() const {
             if (area != -1)
-                std::cout << getArea() << std::endl;
+                std::cout << area << std::endl;
         };
 
         static constexpr double PI = 3.14;  // можно и из Math взять
-    public:
+
         double getX() const {
             return x;
         }
@@ -38,15 +38,12 @@ namespace sh {
             return area;
         }
 
-        void setArea(double area) {
-            Shape::area = area;
-        }
 
         const std::string &getColour() const {
             return colour;
         }
 
-    private:
+    protected:
         double y;
         double x;
         double area = -1;  // площадь

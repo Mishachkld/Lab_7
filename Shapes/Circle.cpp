@@ -8,8 +8,8 @@ namespace sh {
 
 
     double Circle::calculateArea() {
-        setArea(PI * radius);
-        return getArea();
+        area = PI * radius;
+        return area;
     }
 
     double Circle::getRadius() const {

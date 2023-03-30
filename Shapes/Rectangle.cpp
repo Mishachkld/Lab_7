@@ -6,8 +6,8 @@
 
 namespace sh {
     double Rectangle::calculateArea() {
-        setArea(a * b);
-        return getArea();
+        area = a * b;
+        return area;
     }
 
 } // sh
